@@ -51,9 +51,7 @@ class DirectionController {
     }
     
     async destroy ({ params, response }) {
-        const id = params.id
-        const d = Direction.find(id)
-        d.delete()
+        Direction.find(params.id).delete()
         return response.json({message: 'direccion eliminada', d})
     } 
 }
