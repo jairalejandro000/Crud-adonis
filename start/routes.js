@@ -20,4 +20,6 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 Route.post('/insert', 'DirectionController.create')
+Route.put('/update/:id', 'DirectionController.update')
+Route.delete('/delete/:id', 'DirectionController.destroy')
 
